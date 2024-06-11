@@ -1,6 +1,12 @@
 <script>
+import { store } from '../store.js'
 export default {
     name: 'Header',
+    data() {
+        return {
+            store
+        }
+    },
     methods: {
         getImgPath: function (imgPath) {
             return new URL(imgPath, import.meta.url).href;
@@ -27,7 +33,7 @@ export default {
                     <li><router-link to="/about">About us</router-link></li>
                 </ul>
                 <ul class="list-unstyled d-flex gap-2 justify-content-center align-items-center">
-                    <li><i class="fas fa-magnifying-glass"></i></li>
+                    <li @click="store.search = !store.search"><i class="fas fa-magnifying-glass"></i></li>
                     <li><i class="fas fa-bookmark"></i></li>
                     <li><i class="fas fa-user"></i></li>
                 </ul>

@@ -10,16 +10,6 @@ export default {
     return {
       posts: []
     }
-  },
-  methods: {
-    async fetchUsers() {
-      try {
-        const response = await axios.get('https://jsonplaceholder.typicode.com/users');
-        this.users = response.data;
-      } catch (error) {
-        console.error(error);
-      }
-    },
   }
 }
 </script>

@@ -1,5 +1,8 @@
 import { reactive } from 'vue'
 
 export const store = reactive({
-    api: 'localhost:3000/'
+    api: 'http://localhost:3000/',
+    posts: [],
+    saved: [],
+    search: false
 })
